@@ -52,3 +52,23 @@ int maxCircularSum2(int n, vector<int> a){
 	return ms;
 }
 
+
+int maxCircularSum3(int n, vector<int> a){
+    int ts = 0;
+    for (int i=0; i<n; i++)
+        ta += a[i];
+    int cs = 0, minS = INT_MAX;
+    
+    for (int i=0; i<n; i++){
+        cs += a[i];
+        minS = min(minS, cs);
+        if (cs > 0)
+            cs = 0;
+    }
+    if (minS < 0)
+        ts = ts-minS;
+    
+    return ts;
+}
+
+
