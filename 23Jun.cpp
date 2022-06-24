@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// Question - You will be given an array containing only 0s, 1s and 2s. you have sort the array in linear time that is O(N) where N is the size of the array.
+// Question - https://leetcode.com/problems/sort-colors/
 
 void linearSort(vector<int> &v){
 	int l = -1, h = v.size();
