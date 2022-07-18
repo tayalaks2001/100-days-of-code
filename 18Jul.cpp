@@ -39,3 +39,17 @@ void getPrimesNext(vector<int>& primes, int checkTill, int start){
             primes.push_back(i+start);
     }
 }
+
+// Driver code
+int main() {
+    vector<int> primes = getPrimesInit();
+    int checkTill = primes.size();
+    cout<<primes.size()<<endl;
+    int lim = sqrt(MAX);
+    for (int start = lim; start < 10000000; start += lim){
+        getPrimesNext(primes, checkTill, start);
+        cout<<primes.size()<<endl;
+    }
+    cout<<primes[primes.size()-1];
+    return 0;
+}
