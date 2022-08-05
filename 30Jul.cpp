@@ -26,18 +26,6 @@ node* buildTree(){
     return root;
 }
 
-void replaceWithSum(node* &root){
-    if (root == NULL)
-        return;
-    
-    replaceWithSum(root->l);
-    replaceWithSum(root->r);
-    if (root->l != NULL)
-        root->data += root->l->data;
-    if (root->r != NULL)
-        root->data += root->r->data;
-}
-
 void printLevelwise(node* root){
     queue<node*> traversal;
     traversal.push(root);
